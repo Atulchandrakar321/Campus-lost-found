@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Campus Lost & Found</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div>
+                <h1>Campus Lost & Found</h1>
+                <p>Post lost items, browse reports, and manage entries.</p>
+            </div>
+            <div class="badge" id="statusBadge">API: checking…</div>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h2>Add Lost Item</h2>
+
+                <form id="addForm">
+                    <label class="label">Title *</label>
+                    <input id="title" class="input" type="text" placeholder="e.g., Black Wallet" required />
+
+                    <label class="label">Description</label>
+                    <input id="description" class="input" type="text" placeholder="Any identifying details…" />
+
+                    <label class="label">Location</label>
+                    <input id="location" class="input" type="text" placeholder="e.g., Library, Lab, Canteen" />
+
+                    <div style="height: 12px;"></div>
+                    <button class="btn" type="submit">Add Item</button>
+                </form>
+
+                <p id="msg" class="msg"></p>
+            </div>
+
+            <div class="card">
+                <div class="toolbar">
+                    <h2 style="margin:0;">Lost Items</h2>
+                    <div class="row" style="max-width: 420px;">
+                        <input id="searchInput" class="input" type="text" placeholder="Search by title or location" />
+                        <button id="refreshBtn" class="btn secondary" type="button">Refresh</button>
+                    </div>
+                </div>
+
+
+                <div style="display:flex; gap:10px; margin-bottom:12px;">
+                    <button class="btn secondary" type="button" id="filterAll">All</button>
+                    <button class="btn secondary" type="button" id="filterLost">Lost</button>
+                    <button class="btn secondary" type="button" id="filterFound">Found</button>
+                </div>
+
+                <div id="itemsList" class="list"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+
+</html>
