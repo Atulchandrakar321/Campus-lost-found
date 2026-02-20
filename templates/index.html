@@ -49,13 +49,40 @@
                 </div>
 
 
+
+                <!-- SORT DROPDOWN -->
+                <div class="sort-wrap">
+                    <span class="sort-label">Sort by</span>
+
+                    <div class="dropdown" id="sortDropdown">
+                        <button class="btn secondary dropdown-btn" id="sortBtn" type="button">
+                            Newest first
+                            <span class="chev">▾</span>
+                        </button>
+
+                        <div class="dropdown-menu" id="sortMenu">
+                            <button class="dropdown-item" type="button" data-sort="newest">Newest first</button>
+                            <button class="dropdown-item" type="button" data-sort="oldest">Oldest first</button>
+                            <button class="dropdown-item" type="button" data-sort="az">Title A–Z</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- FILTER BUTTONS -->
                 <div style="display:flex; gap:10px; margin-bottom:12px;">
-                    <button class="btn secondary" type="button" id="filterAll">All</button>
-                    <button class="btn secondary" type="button" id="filterLost">Lost</button>
-                    <button class="btn secondary" type="button" id="filterFound">Found</button>
+                    <button class="btn secondary" id="filterAll" type="button">All</button>
+                    <button class="btn secondary" id="filterLost" type="button">Lost</button>
+                    <button class="btn secondary" id="filterFound" type="button">Found</button>
                 </div>
 
                 <div id="itemsList" class="list"></div>
+                <div class="pagination">
+                    <button id="prevPage" class="btn secondary" type="button">Previous</button>
+                    <span id="pageInfo" class="page-info">Page 1</span>
+                    <button id="nextPage" class="btn secondary" type="button">Next</button>
+                </div>
+
 
             </div>
         </div>
